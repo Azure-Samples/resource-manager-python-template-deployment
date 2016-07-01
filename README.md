@@ -1,5 +1,8 @@
-# resource-manager-python-template-deployment
-An example illustrating how to use Python to deploy an Azure Resource Manager Template
+---
+services: azure-resource-manager
+platforms: python
+author: lmazuel
+---
 
 # Deploy an SSH Enabled VM with a Template in Python
 
