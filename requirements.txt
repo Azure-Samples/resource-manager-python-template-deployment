@@ -1,2 +1,2 @@
-azure-mgmt-resource==0.30.0rc4
+azure-mgmt-resource==0.30.0rc5
 haikunator
