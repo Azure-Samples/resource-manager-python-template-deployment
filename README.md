@@ -50,7 +50,7 @@ To initialize a virtual environment:
 - `cd mytestenv`
 - `source bin/activate`
 
-Once in your virtual environement:
+Once in your virtual environment:
 - [Create a Service Principal](https://azure.microsoft.com/en-us/documentation/articles/resource-group-authenticate-service-principal/#authenticate-with-password---azure-cli)
 - `git clone https://github.com/Azure-Samples/resource-manager-python-template-deployment.git`
 - `cd resource-manager-python-template-deployment`
@@ -181,7 +181,7 @@ class Deployer(object):
 
 The `__init__` method initializes the class with subscription, resource group and public key. The method also fetches
 the Azure Active Directory bearer token, which will be used in each HTTP request to the Azure Management API. The class
-will raise excewptions under two conditions, if the public key path does not exist or if there are empty
+will raise exceptions under two conditions: if the public key path does not exist, or if there are empty
 values for Tenant Id, Client Id or Client Secret environment variables.
 
 The `deploy` method does the heavy lifting of creating or updating the resource group, preparing the template,
@@ -190,7 +190,7 @@ parameters and deploying the template.
 The `destroy` method simply deletes the resource group thus deleting all of the resources within that group.
 
 Each of the above methods use the `azure.mgmt.resource.ResourceManagementClient` class, which resides within the
-[azure-mgmt-resource](https://pypi.python.org/pypi/azure-mgmt-resource/) package ([see the docs docs here](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagement.html)).
+[azure-mgmt-resource](https://pypi.python.org/pypi/azure-mgmt-resource/) package ([see the docs here](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagement.html)).
 
 After the script runs, you should see something like the following in your output:
 
