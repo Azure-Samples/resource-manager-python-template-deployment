@@ -42,7 +42,7 @@ network interface belonging to the subnet. The virtual machine is a `Standard_D1
 You will need to create an Azure service principal either through Azure CLI, PowerShell or the portal. You should gather
 each the Tenant Id, Client Id and Client Secret from creating the Service Principal for use below.
 
-We recommend to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to run this example, but it's not mandatory.
+We recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to run this example, but it's not mandatory.
 To initialize a virtual environment:
 
 - `pip install virtualenv`
