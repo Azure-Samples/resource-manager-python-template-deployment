@@ -39,25 +39,47 @@ network interface belonging to the subnet. The virtual machine is a `Standard_D1
 
 ### To run this sample, do the following:
 
-You will need to create an Azure service principal either through Azure CLI, PowerShell or the portal. You should gather
-the Tenant Id, Client Id and Client Secret from creating the Service Principal for use below.
+1. If you don't already have it, [install Python](https://www.python.org/downloads/).
 
-We recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to run this example, but it's not mandatory.
-To initialize a virtual environment:
+1. We recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to run this example,
+    but it's not mandatory.
+    To initialize a virtual environment:
 
-- `pip install virtualenv`
-- `virtualenv mytestenv`
-- `cd mytestenv`
-- `source bin/activate`
+    ```
+    pip install virtualenv
+    virtualenv mytestenv
+    cd mytestenv
+    source bin/activate
+    ```
 
-Once in your virtual environment:
-- [Create a Service Principal](https://azure.microsoft.com/en-us/documentation/articles/resource-group-authenticate-service-principal/#authenticate-with-password---azure-cli)
-- `git clone https://github.com/Azure-Samples/resource-manager-python-template-deployment.git`
-- `cd resource-manager-python-template-deployment`
-- `export AZURE_TENANT_ID={your tenant id}`
-- `export AZURE_CLIENT_ID={your client id}`
-- `export AZURE_CLIENT_SECRET={your client secret}`
-- `python azure_deployment.py`
+1. Create a Service Principal, either through
+    [Azure CLI](https://azure.microsoft.com/documentation/articles/resource-group-authenticate-service-principal-cli/),
+    [PowerShell](https://azure.microsoft.com/documentation/articles/resource-group-authenticate-service-principal/)
+    or [the portal](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/).
+   
+1. Clone this repository and navigate into it.
+
+    ```
+    git clone https://github.com/Azure-Samples/resource-manager-python-template-deployment.git
+    cd resource-manager-python-template-deployment
+    ```
+
+1. Create environment variables with the necessary IDs for Azure authentication.
+    You can learn where to find the first three IDs in the Azure portal in [this document](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
+    The subscription ID is in the subscription's overview in the "Subscriptions" blade of the portal.
+
+    ```
+    export AZURE_TENANT_ID={your tenant id}
+    export AZURE_CLIENT_ID={your client id}
+    export AZURE_CLIENT_SECRET={your client secret}
+    export AZURE_SUBSCRIPTION_ID={your subscription id}
+    ```
+
+1. Run the script.
+    
+    ```
+    python azure_deployment.py
+    ```
 
 ### What is this azure_deployment.py Doing?
 
