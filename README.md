@@ -83,13 +83,13 @@ network interface belonging to the subnet. The virtual machine is a `Standard_D1
 
 ### What is this azure_deployment.py Doing?
 
-The entry point for this sample is [azure_deployment.py](https://github.com/azure-samples/resource-manager-python-template-deployment/blob/master/azure_deployment.py). This script uses the deployer class
-below to deploy a the aforementioned template to the subscription and resource group specified in `my_resource_group`
+The entry point for this sample is [azure_deployment.py](https://github.com/azure-samples/resource-manager-python-template-deployment/blob/master/azure_deployment.py). This script uses the `Deployer` class
+below to deploy the aforementioned template to the subscription and resource group specified in `my_resource_group`
 and `my_subscription_id` respectively. By default the script will use the ssh public key from your default ssh
 location.
 
-*Note: you must set each of the below environment variables (AZURE_TENANT_ID, AZURE_CLIENT_ID and AZURE_CLIENT_SECRET) prior to
-running the script.*
+*Note: you must set each of the environment variables (`AZURE_TENANT_ID`, `AZURE_CLIENT_ID` and `AZURE_CLIENT_SECRET`) prior to
+running the script, and either set `AZURE_SUBSCRIPTION_ID` or replace it in the script. See the numbered list above for instructions on how to do this.*
 
 ``` python
 import os.path
