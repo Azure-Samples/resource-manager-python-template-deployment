@@ -201,15 +201,17 @@ class Deployer(object):
         self.client.resource_groups.delete(self.resource_group)
 ```
 
-The `__init__` method initializes the class with subscription, resource group and public key. The method also fetches
+The `__init__` method initializes the class with the subscription, resource group and public key. The method also fetches
 the Azure Active Directory bearer token, which will be used in each HTTP request to the Azure Management API. The class
 will raise exceptions under two conditions: if the public key path does not exist, or if there are empty
-values for Tenant Id, Client Id or Client Secret environment variables.
+values for `AZURE_TENANT_ID`, `AZURE_CLIENT_ID` or `AZURE_CLIENT_SECRET` environment variables.
 
-The `deploy` method does the heavy lifting of creating or updating the resource group, preparing the template,
+The `deploy` method does the heavy lifting of creating or updating the resource group, preparing the template
 parameters and deploying the template.
 
 The `destroy` method simply deletes the resource group thus deleting all of the resources within that group.
+Note that it is commented out in `azure_deployment.py`. But you can uncomment it to easily clean up the resources
+created by this sample if you no longer need them.
 
 Each of the above methods use the `azure.mgmt.resource.ResourceManagementClient` class, which resides within the
 [azure-mgmt-resource](https://pypi.python.org/pypi/azure-mgmt-resource/) package ([see the docs here](http://azure-sdk-for-python.readthedocs.io/en/latest/resourcemanagement.html)).
