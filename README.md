@@ -63,6 +63,11 @@ network interface belonging to the subnet. The virtual machine is a `Standard_D1
     git clone https://github.com/Azure-Samples/resource-manager-python-template-deployment.git
     cd resource-manager-python-template-deployment
     ```
+1. Install all required libraries within the virtual environment.
+
+   ```
+   pip install -r requirements
+   ```
 
 1. Create environment variables with the necessary IDs for Azure authentication.
     You can learn where to find the first three IDs in the Azure portal in [this document](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key).
