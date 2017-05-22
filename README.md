@@ -66,7 +66,7 @@ network interface belonging to the subnet. The virtual machine is a `Standard_D1
 1. Install all required libraries within the virtual environment.
 
    ```
-   pip install -r requirements
+   pip install -r requirements.txt
    ```
 
 1. Create environment variables with the necessary IDs for Azure authentication.
